@@ -10,5 +10,6 @@ public class AuthenticationResponse extends BasicResponse {
     private String token;
     private String createdAt;
     private String expiresAt;
+    private UserResponse user;
 
 }

@@ -11,8 +11,8 @@ import org.hibernate.validator.constraints.UUID;
 @Setter
 public class UpdateCardRequest {
 
-    @NotBlank(message = "UUID is required")
-    @UUID(message = "Invalid UUID value")
+    @NotBlank(message = "Card uuid is required")
+    @UUID(message = "Invalid card uuid value")
     private String id;
     @NotBlank(message = "Number is required")
     @Pattern(regexp = "[0-9]{16}", message = "Invalid card number")

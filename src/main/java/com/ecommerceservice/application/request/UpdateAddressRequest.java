@@ -12,11 +12,12 @@ import org.hibernate.validator.constraints.UUID;
 @ToString
 public class UpdateAddressRequest {
 
-    @NotBlank(message = "UUID is required")
-    @UUID(message = "Invalid UUID value")
+    @NotBlank(message = "Address uuid is required")
+    @UUID(message = "Invalid uuid value")
     private String id;
 
-    @NotBlank(message = "Country is required")
+    @NotBlank(message = "Country uuid is required")
+    @UUID(message = "Invalid country uuid value")
     private String country;
 
     @NotBlank(message = "Street address is required")

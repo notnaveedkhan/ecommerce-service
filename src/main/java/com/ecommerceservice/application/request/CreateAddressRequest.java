@@ -13,7 +13,7 @@ import org.hibernate.validator.constraints.UUID;
 public class CreateAddressRequest {
 
     @NotBlank(message = "Country is required")
-    @UUID(message = "Invalid UUID value")
+    @UUID(message = "Invalid country uuid value")
     private String country;
 
     @NotBlank(message = "Street address is required")

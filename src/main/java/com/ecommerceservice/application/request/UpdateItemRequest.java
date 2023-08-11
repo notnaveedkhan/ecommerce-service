@@ -11,8 +11,8 @@ import org.hibernate.validator.constraints.UUID;
 @Setter
 public class UpdateItemRequest {
 
-    @NotBlank(message = "UUID is required")
-    @UUID(message = "Invalid UUID value")
+    @NotBlank(message = "Item uuid is required")
+    @UUID(message = "Invalid item uuid value")
     private String id;
 
     @NotBlank(message = "Name is required")

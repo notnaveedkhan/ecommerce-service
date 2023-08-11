@@ -5,6 +5,7 @@ import com.ecommerceservice.application.exception.InvalidRequestException;
 import com.ecommerceservice.application.repository.UserRepository;
 import com.ecommerceservice.application.request.AuthenticationRequest;
 import com.ecommerceservice.application.response.AuthenticationResponse;
+import com.ecommerceservice.application.response.UserResponse;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
@@ -59,6 +60,7 @@ public class AuthenticationService {
             response.setToken(encoder.encode(JwtEncoderParameters.from(claims)).getTokenValue());
             response.setCreatedAt(now.toString());
             response.setExpiresAt(now.plus(2, ChronoUnit.HOURS).toString());
+            response.setUser(new UserResponse(user));
             log.info("<<< AuthenticationService - authenticate response : {}", response);
             return response;
         } catch (JsonProcessingException e) {

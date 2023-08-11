@@ -12,8 +12,8 @@ import org.hibernate.validator.constraints.UUID;
 @ToString
 public class UpdateCountryRequest {
 
-    @NotBlank(message = "UUID is required")
-    @UUID(message = "Invalid UUID value")
+    @NotBlank(message = "Country uuid is required")
+    @UUID(message = "Invalid Country uuid value")
     private String id;
 
     @NotBlank(message = "Name is required")
